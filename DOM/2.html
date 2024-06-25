@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning</title>
+<style>
+    .bg-black{
+        background-color:#212121;
+        color: #fff;
+    }
+</style>
+
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="meaning">This is  <span>test text</span>  code</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <h2>1.Lorem ipsum dolor sit amet.</h2>
+        <h2>2.Lorem ipsum dolor sit amet.</h2>
+        <h2>3.Lorem ipsum dolor sit amet.</h2>
+    </div>
+
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+</body>
+    <script>
+        let a = document.getElementById('title')
+        console.log(a);
+        a.style.backgroundColor='green'
+        let b = a.textContent
+        console.log(b);
+        let c = a.innerHTML
+        console.log(c);
+        let d = a.innerText
+        console.log(d);
+        // let query = document.querySelector('li')
+        // console.log(query);
+        // query.style.backgroundColor='blue'
+        let list = document.querySelectorAll('li')
+        list[2].style.color = 'green'
+    </script>
+</html>
+
+<!--text content shows original content
+    innertext does not shows hidden content by css
+    innerHTML shows full html including tags 
+-->

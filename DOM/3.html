@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning</title>
+</head>
+<body style="background-color: black; color:white;">
+    <div id="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wenesday</div>
+        <div class="day">thursday</div>
+        <div class="day">friday</div>
+    </div>
+
+    <script>
+        let color = document.getElementById('parent')
+        // let color = 52
+        // console.log(color);
+        console.log("nodes :" ,color.childNodes);
+        console.log(color.children);
+        console.log(color.children[1].innerHTML);
+        for (let i = 0; i <color.children.length; i++) {
+            console.log( color.children[i].innerHTML);
+             }
+        // color.style.backgroundColor = 'blue'
+    </script>
+</body>
+</html>

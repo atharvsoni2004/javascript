@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation</title>
+</head>
+<body>
+    <h1>Creation of new element</h1>
+</body>
+<script>
+    let a = document.createElement('h1')
+    a.className = 'class'
+    a.id = 'id'
+    console.log(a);
+    let b = document.createElement('div')
+    b.id = Math.random() + 1
+    b.setAttribute('title','generated title')
+    b.style.color = 'orange'
+    b.style.backgroundColor = 'green'
+    let text = document.createTextNode( 'hello javacript')
+    b.appendChild(text)
+    document.body.appendChild(b)
+    console.log(b);
+</script>
+</html>
