@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+       
+       #div1{
+            padding: 24px;
+            border: 1px solid black;
+        }
+
+        #div2{
+            padding: 24px;
+            border: 1px solid black;
+        }
+
+        #div3{
+            padding: 24px;
+            border: 1px solid black;
+        }
+    </style>
+<body>
+    <h1>Learning about event propogation.</h1>
+    <div id="div1">div 1
+        <div id="div2">div 2
+            <div id="div3">div 3</div>
+        </div>
+    </div>
+</body>
+    <script>
+        document.querySelector('#div1').addEventListener('click',function(e)
+    {       
+        e.stopPropagation()
+          console.log('DIV1 is clicked');
+    },false)
+
+    document.querySelector('#div2').addEventListener('click',function(e)
+    {
+        e.stopPropagation()
+        console.log('DIV2 is clicked');
+    },false)
+
+    document.querySelector('#div3').addEventListener('click',function(e)
+    {   e.stopPropagation()
+        console.log('DIV3 is clicked');
+    },)
+    </script>
+</html>
+
+<!-- //false is default
+false is event bubbling  => bottom to up
+true is event capturing =>top to bottom
+ -->
