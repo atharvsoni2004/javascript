@@ -20,7 +20,28 @@ Object.prototype.heyHitesh = function()
     console.log('hello i am hitesh');
 }
 
-heroPower.supermacy()
-myHeros.supermacy()
-heroPower.heyHitesh()
+// heroPower.supermacy()
+// myHeros.supermacy()
+// heroPower.heyHitesh()
 // freedomfighters.heyHitesh()
+
+const user = {
+    name : 'chai',
+    email : 'hitesh@google.com'
+}
+
+const Teacher ={
+    isAvailabe : true
+}
+
+const TeachingSupport = {
+    isAvailable: false
+}
+
+const TASupport = {
+    makeAssignment: 'JS assignment',
+    fullTime: true,
+}
+
+Object.setPrototypeOf(TeachingSupport, Teacher)
+console.log(TeachingSupport.isAvailable); // Output: false
